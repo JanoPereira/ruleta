@@ -20,7 +20,7 @@ window.addEventListener("load",()=>{
             }
         });
         betTotal.innerHTML = totalAmount;
-        valueCell.innerHTML = totalAmount * parseInt(chipValue.value);
+        valueCell.innerHTML = `$${displayBigNumbers(totalAmount * parseInt(chipValue.value))}`;
     });
 
     function checkForNumericInputs() {
@@ -47,5 +47,8 @@ window.addEventListener("load",()=>{
       }
     function isNumber(value) {
         return /^[0-9]*$/.test(value);
+      }
+    function displayBigNumbers(nmbr) {
+        return nmbr.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
 });
