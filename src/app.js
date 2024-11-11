@@ -14,14 +14,6 @@ app.set('views', path.resolve(__dirname, './views'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-// Express-session
-const session = require('express-session');
-app.use(session({
-    secret: "Conf middleware global session",
-    resave: false,
-    saveUninitialized: false
-}));
-
 // Cookie-parser
 const cookieParser =require('cookie-parser');
 app.use(cookieParser());
