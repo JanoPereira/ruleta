@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Roullete</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/index.js"></script>
+  </head>
+  <body>
+    <main class="tables_container">
+        <table id="gameTable" class="center-table">
+            <tr class="header_row">
+                <th class="black column-25"></th>
+                <th class="yellow column-30">CHIP VALUE</th>
+                <th class="black column-30"></th>
+            </tr>
+            <tr>
+                <th class="black column-25 white_color">CHIP COUNT</th>
+                <th class="yellow column-30"><input type="number" inputmode="numeric" placeholder="0"  id="chip_value" class="number-input numeric_only_input green-input"></th>
+                <th class="black column-30 white_color">BET COUNT</th>
+            </tr>
+            <tr>
+                <td class="green black_color"><input type="number" inputmode="numeric" placeholder="0"  class="number-input numeric_only_input green-input"></td>
+                <td class="black white_color">STRAIGHT UP</td>
+                <td class="green black_color multiplier" data-multiply ='35'>x35</td>
+            </tr>
+            <tr>
+                <td class="yellow black_color"><input type="number" inputmode="numeric" placeholder="0" class="number-input numeric_only_input yellow-input"></td>
+                <td class="black white_color">SPLIT</td>
+                <td class="yellow black_color multiplier" data-multiply ='17'>x17</td>
+            </tr>
+            <tr>
+                <td class="green black_color"><input type="number" inputmode="numeric" placeholder="0" class="number-input numeric_only_input green-input"></td>
+                <td class="black white_color">CORNER</td>
+                <td class="green black_color multiplier" data-multiply ='8'>x8</td>
+            </tr>
+            <tr>
+                <td class="yellow black_color"><input type="number" inputmode="numeric" placeholder="0" class="number-input numeric_only_input yellow-input"></td>
+                <td class="black white_color">STREET</td>
+                <td class="yellow black_color multiplier" data-multiply ='11'>x11</td>
+            </tr>
+            <tr>
+                <td class="green black_color"><input type="number" inputmode="numeric" placeholder="0" class="number-input numeric_only_input green-input"></td>
+                <td class="black white_color">6-LINE</td>
+                <td class="green black_color multiplier" data-multiply ='5'>x5</td>
+            </tr>
+        </table>
+        <table id="resultTable" class="center-table">
+            <tr class="header_row">
+                <th class="black column-25"></th>
+                <th class="yellow column-30">BET TOTAL</th>
+                <th class="black column-30">$VALUE</th>
+            </tr>
+            <tr>
+                <td class="grey sum_cell">SUM</td>
+                <td class="green black_color" id="bet_total_cell">0</td>
+                <td class="yellow black_color" id="value_cell">0</td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+
+</html>
