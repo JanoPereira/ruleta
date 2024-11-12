@@ -22,7 +22,12 @@ window.addEventListener("load",()=>{
         betTotal.innerHTML = totalAmount;
         valueCell.innerHTML = `$${displayBigNumbers(totalAmount * parseInt(chipValue.value))}`;
     });
-
+    const inputsToCheckFocus = document.querySelectorAll('.number-input');
+    inputsToCheckFocus.forEach(input => {
+      input.addEventListener('focus',()=>{
+        input.value = '';
+      })
+    });
     function checkForNumericInputs() {
         let numericInputs = document.querySelectorAll(".numeric_only_input");
         numericInputs.forEach((input) => {
